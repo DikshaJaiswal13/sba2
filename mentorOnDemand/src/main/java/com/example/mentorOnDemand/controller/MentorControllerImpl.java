@@ -40,58 +40,7 @@ public class MentorControllerImpl {
 
 	}
 	
-	/*@RequestMapping(value = "/mentorLogin", method = RequestMethod.POST) 
-	public String loginUser(@Valid Mentor mentor, BindingResult result, Model model, HttpSession session) throws SQLException { 
-		System.out.println("inside post method"); 
-		System.out.println("password"+userlogin.getPassword());
-		User user=userService.loginUser(userlogin);
-		System.out.println("inside login controller..................."+user);
-		if(user!=null && user.getPassword().equals(userlogin.getPassword())) {	
-			session.setAttribute("user", user);
-			return	"userDetails";
-		}
-		else 
-			return "redirect:/userLogin"; 
-
-	}
 	
-	@RequestMapping(value = "/userRegister", method = RequestMethod.GET)
-	public String userRegistration(ModelMap model) throws SQLException {
-		User user=new User();
-		model.addAttribute("ul",user);
-		return "userRegistration";
-
-	}
-	
-	@RequestMapping(value = "/register", method = RequestMethod.POST) 
-	public String registerUser(@Valid User user, BindingResult result, Model model, HttpSession session) throws SQLException {  
-		Random r=new Random();
-		int num = (r.nextInt(90000) + 10000);
-		user.setId(Integer.valueOf(num));
-		num=r.nextInt(9000)+1000;
-		user.setRegCode(num);
-		//java.util.Date d=new java.util.Date();
-		//java.sql.Date date=new java.sql.Date(d.getTime());
-		java.util.Date utilDate = new java.util.Date();
-		System.out.println("java.util.Date : " + utilDate);
-
-		java.sql.Timestamp sqlTimeStamp = convertJavaDateToSqlDate(utilDate);
-		System.out.println("java.sql.Timestamp : " + sqlTimeStamp);
-		user.setRegDatetime(sqlTimeStamp);
-		System.out.println(sqlTimeStamp);
-		user.setActive(1);
-		System.out.println("inside post method....................."+user);
-		if(userService.registerUser(user))
-			return "redirect:/userLogin";
-		else
-			return "redirect:/userRegister";
-
-	}
-	
-	public static java.sql.Timestamp convertJavaDateToSqlDate(java.util.Date date)
-	{
-		return new java.sql.Timestamp(date.getTime());
-	}*/
 	
 	@RequestMapping(value = "/mentorRegister", method = RequestMethod.GET)
 	public String mentorRegistration(ModelMap model) throws SQLException {
@@ -133,14 +82,7 @@ public class MentorControllerImpl {
 	@RequestMapping(value = "/mentorLogin", method = RequestMethod.POST) 
 	public String loginMentor(@Valid Mentor mentor, BindingResult result, Model model, HttpSession session) throws SQLException { 
 		System.out.println("inside login post"); 
-		//System.out.println("password"+userlogin.getPassword());
-		/*
-		 * Mentor mentor=mentorService.loginUser(userlogin);
-		 * 
-		 * if(user!=null && user.getPassword().equals(userlogin.getPassword())) {
-		 * session.setAttribute("user", user); return "userDetails"; } else return
-		 * "redirect:/userLogin";
-		 */
+		
 		
 		
 		System.out.println(mentor.getUsername());
