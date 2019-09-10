@@ -6,4 +6,6 @@ import com.example.mentorOnDemand.model.Mentor;
 
 public interface MentorDao extends JpaRepository<Mentor, Integer>{
 
+	Mentor findByUsername(String username);
+
 }
