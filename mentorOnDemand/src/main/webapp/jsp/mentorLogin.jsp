@@ -35,9 +35,15 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar" style="">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="./mentorLogin.html">Login As Mentor</a></li>
-						<li><a href="./adminLogin.html">Login As Admin</a></li>
-						<li ><a href="./userLogin.html">Login As User</a></li>
+					
+						<spring:url value="/mentorLogin" var="link1" htmlEscape="true" />
+						<li class="active"><a href="${link1}">Login As Mentor</a></li>
+						
+						<spring:url value="/adminLogin" var="link2" htmlEscape="true" />
+						<li><a href="${link2}">Login As Admin</a></li>
+						
+						<spring:url value="/userLogin" var="link3" htmlEscape="true" />
+						<li><a href="${link3 }">Login As User</a></li>
 						
 					</ul>
 					
@@ -54,21 +60,30 @@
 					<div class="card-body">
 						<h5 class="card-title text-center">Login</h5>
 						<hr>
-						<form class="form-signin">
+						<form:form class="form-signin" action="/mentorLogin" modelAttribute="ml">
 							<div class="form-label-group"></div>
-							<input type="text" placeholder="Email Id"
-								class="form-control input-lg" id="email"> <br />
+							<form:input type="text" placeholder="Username"
+								class="form-control input-lg" id="username" path="username"/> <br />
 							<div class="form-label-group"></div>
-							<input type="password" placeholder="Password"
-								class="form-control input-lg" id="password"> <br />
+							<form:input type="password" placeholder="Password"
+								class="form-control input-lg" id="password" path="password"/> <br />
 							<div style="text-align: center;">
-								<a href="./mentorDetails.html" class="btn btn-lg btn-primary text-uppercase"
-									type="submit" onclick=" relocate_home()">LogIn</a>
-								<a href="./mentorRegistration.html" class="btn btn-lg btn-primary text-uppercase"
+							
+							<%-- <spring:url value="/mentorDetails" var="link5" htmlEscape="true" />
+								<a href="${link5 }" class="btn btn-lg btn-primary text-uppercase"
+									type="submit" onclick=" relocate_home()">LogIn</a> --%>
+									
+									
+									
+									<input type="submit" class="btn btn-lg btn-primary text-uppercase"
+													value="Login">
+									
+										<spring:url value="/mentorRegister" var="link4" htmlEscape="true" />
+								<a href="${link4}" class="btn btn-lg btn-primary text-uppercase"
 									type="submit">Sign Up</a>
 								
 							</div>
-						</form>
+						</form:form>
 
 					</div>
 				</div>
