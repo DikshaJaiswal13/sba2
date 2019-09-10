@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class Mentor {
 
 	 @Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    
 	    private int id;
 	   
 	    @Column(name="username")
@@ -35,19 +35,7 @@ public class Mentor {
 	    @Column(name="reg_code")
 	    private String regCode;
 
-//	    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-//	    @JoinTable(name = "mentor_details",
-//	    inverseJoinColumns = @JoinColumn(name = "mentorskill_id"),
-//	    joinColumns = @JoinColumn(name = "mentor_id"))
-//	    @JsonManagedReference
-//	    private Set<MentorSkill> mentorskills = new HashSet<MentorSkill>();
-	//    
-//	    public Set<MentorSkill> getMentorskills() {
-//	  		return mentorskills;
-//	  	}
-//	  	public void setMentorskills(Set<MentorSkill> mentorskills) {
-//	  		this.mentorskills = mentorskills;
-//	  	}
+
 	    
 	    public int getId() {
 			return id;
