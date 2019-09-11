@@ -1,6 +1,6 @@
 package com.example.mentorOnDemand.model;
 
-//import java.sql.Date;
+
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -15,9 +15,9 @@ import javax.validation.constraints.NotNull;
 public class User {
 
 	@Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+   
     private int id;
-//import sid from Technology.java  for registration of any course.
+
    
  
     @NotNull
