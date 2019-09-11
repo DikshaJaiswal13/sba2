@@ -12,19 +12,17 @@ import javax.persistence.Table;
 public class Technology {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   
     private int id;
-//link to MentorSkill.java
+
     
     
- //unique courses must have unique mid and folowing all the entity
+
    
     @Column(name = "technology_name")
     private String technologyName ;
     
-	/*
-	 * @Column(name = "toc") private String toc ;
-	 */
+	
     
     @Column(name = "fees")
     private Double fees ;
@@ -34,9 +32,7 @@ public class Technology {
     private Double duration ;
     
    
-	/*
-	 * @Column(name = "prerequites") private String prerequites ;
-	 */
+	
 
 
 	public String getTechnologyName() {
@@ -48,13 +44,7 @@ public class Technology {
 		this.technologyName = technologyName;
 	}
 
-	/*
-	 * public String getToc() { return toc; }
-	 * 
-	 * 
-	 * public void setToc(String toc) { this.toc = toc; }
-	 */
-
+	
 	public Double getFees() {
 		return fees;
 	}
@@ -75,13 +65,7 @@ public class Technology {
 	}
 
 
-	/*
-	 * public String getPrerequites() { return prerequites; }
-	 * 
-	 * 
-	 * public void setPrerequites(String prerequites) { this.prerequites =
-	 * prerequites; }
-	 */
+	
 
 	public Technology(int id, String technology_name, Double fees, Double duration) {
 		super();
