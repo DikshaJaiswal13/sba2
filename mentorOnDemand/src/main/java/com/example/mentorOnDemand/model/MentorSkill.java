@@ -15,19 +15,9 @@ import javax.persistence.Table;
 public class MentorSkill {
 	
 	  @Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	   
 	    private int id;
-	//link to Mentor.java
-	    
-		/*
-		 * @Column(name="mentor_id") private Long mentor_id;
-		 */
-	 //unique courses must have unique mid and folowing all the entity
-	    
-	    //import sid from technology.java
-		/*
-		 * @Column(name="skill_id") private Long skill_id;
-		 */
+	
 	    
 	    @Column(name="self_rating")
 	    private BigDecimal selfRating;
@@ -38,9 +28,7 @@ public class MentorSkill {
 	    @Column(name="training_delivered")
 	    private Integer trainingDelivered ;
 	    
-		/*
-		 * @Column(name="facilities_offered") private String facilities_offered;
-		 */
+		
 	    @Column(name = "technology_name")
 	    private String technologyName ;
 	    
@@ -56,18 +44,7 @@ public class MentorSkill {
 	    @Column(name="end_date")
 	    private Date endDate ;
 	    
-		/*
-		 * @ManyToMany(mappedBy="mentorskills",fetch = FetchType.EAGER)
-		 * 
-		 * @JsonBackReference private Set<Mentor> mentors;
-		 * 
-		 * 
-		 * public Set<Mentor> getMentors() { return mentors; }
-		 * 
-		 * 
-		 * public void setMentors(Set<Mentor> mentors) { this.mentors = mentors; }
-		 */
-
+		
 	    
 	    public int getId() {
 			return id;
