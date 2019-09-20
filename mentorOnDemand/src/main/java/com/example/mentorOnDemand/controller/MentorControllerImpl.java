@@ -169,6 +169,7 @@ public class MentorControllerImpl {
 	
 	public static java.sql.Timestamp convertJavaDateToSqlDate(java.util.Date date)
 	{
-		return new java.sql.Timestamp(date.getTime());
+		java.sql.Timestamp jst=new Timestamp(date.getTime());
+		return jst;
 	}
 }
